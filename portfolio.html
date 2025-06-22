@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="es">
+    <meta name="language" content="Spanish">
+    <title>Marco Ortega | PHP Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #3b82f6;
+}
+
+        body.dark-mode .gradient-text {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #3b82f6;
+}
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #3b82f6;
+            border: 3px solid #1e293b;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #e2e8f0;
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background-color: #1e293b;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            border-radius: 4px;
+            transition: width 1s ease-in-out;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
+        }
+        
+        .flip-card {
+            perspective: 1000px;
+            height: 100%;
+        }
+        
+        .flip-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .hover-grow {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-grow:hover {
+            transform: scale(1.03);
+        }
+        
+        .lang-btn {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            background: transparent;
+            color: #94a3b8;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn:hover {
+            color: #e2e8f0;
+        }
+        
+        .active-lang {
+            background: #3b82f6;
+            color: white;
+        }
+
+        /* Light theme styles */
+        
+body.light-mode {
+    background-color: #ffffff;
+    color: #334155;
+}
+body.light-mode header {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+body.light-mode .bg-slate-800,
+body.light-mode .bg-slate-800\/50,
+body.light-mode .bg-slate-700,
+body.light-mode .bg-slate-900 {
+    background-color: #f8fafc !important;
+    color: #334155;
+    border-color: #e2e8f0;
+}
+body.light-mode .text-slate-300 {
+    color: #475569;
+}
+body.light-mode .text-slate-400 {
+    color: #64748b;
+}
+body.light-mode .text-slate-500 {
+    color: #64748b;
+}
+body.light-mode .skill-bar {
+    background-color: #e2e8f0;
+}
+body.light-mode .timeline::before {
+    background: #e2e8f0;
+}
+body.light-mode .timeline-item::before {
+    border-color: #ffffff;
+    background: #3b82f6;
+}
+body.light-mode .gradient-text {
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #2563eb;
+}
+body.light-mode .border-slate-700,
+body.light-mode .border-slate-600 {
+    border-color: #cbd5e1;
+}
+body.light-mode .text-blue-400 {
+    color: #2563eb;
+}
+body.light-mode .text-purple-400 {
+    color: #7c3aed;
+}
+body.light-mode .text-green-400 {
+    color: #059669;
+}
+body.light-mode .text-yellow-400 {
+    color: #ca8a04;
+}
+body.light-mode .text-pink-400 {
+    color: #d946ef;
+}
+body.light-mode .bg-blue-900\/30,
+body.light-mode .bg-purple-900\/30,
+body.light-mode .bg-green-900\/30,
+body.light-mode .bg-yellow-900\/30,
+body.light-mode .bg-red-900\/30,
+body.light-mode .bg-pink-900\/30,
+body.light-mode .bg-gray-900\/30 {
+    background-color: #e2e8f0 !important;
+    color: #334155;
+}
+body.light-mode .flip-card-front {
+    background-color: #f1f5f9;
+    color: #334155;
+    border-color: #cbd5e1;
+}
+body.light-mode .flip-card-back {
+    background-color: #e2e8f0;
+    color: #334155;
+}
+body.light-mode footer {
+    background-color: #f1f5f9 !important;
+    border-color: #e2e8f0;
+}
+body.light-mode footer p,
+body.light-mode footer a {
+    color: #64748b;
+}
+/* Iconos en sección Contact en tema claro */
+body.light-mode .contact-icon.text-blue-400 {
+    color: #2563eb !important;
+}
+body.light-mode .contact-icon.text-purple-400 {
+    color: #7c3aed !important;
+}
+body.light-mode .contact-icon.text-green-400 {
+    color: #059669 !important;
+}
+/* Iconos de redes sociales en tema claro */
+body.light-mode .social-icon {
+    color: #334155 !important;
+}
+
+
+
+        body.light-mode .border-slate-700,
+        body.light-mode .border-slate-600 {
+            border-color: #cbd5e1;
+        }
+
+        body.light-mode .text-blue-400 {
+            color: #60a5fa;
+        }
+
+        body.light-mode .text-purple-400 {
+            color: #8b5cf6;
+        }
+
+        body.light-mode h1,
+        body.light-mode h2,
+        body.light-mode h3,
+        body.light-mode h4 {
+            color: #1e293b;
+        }
+    </style>
+</head>
+<body class="min-h-screen dark-mode">
+    <header class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-800">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold gradient-text">Marco Ortega</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_about">About Me</a>
+                    <a href="#skills" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_skills">Technical Skills</a>
+                    <a href="#projects" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_projects">Projects</a>
+                    <a href="#experience" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_experience">Experience</a>
+                    <a href="#contact" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_contact">Contact</a>
+                    <div class="flex items-center space-x-4 ml-4">
+                        <button id="theme-toggle" class="text-slate-300 hover:text-white transition">
+                            <i class="fas fa-moon" id="theme-icon"></i>
+                        </button>
+                        <div class="flex items-center space-x-2">
+                            <button class="lang-btn active-lang" data-lang="es">ES</button>
+                            <span class="text-slate-400">|</span>
+                            <button class="lang-btn" data-lang="en">EN</button>
+                        </div>
+                    </div>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-slate-300">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#about" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_about">About Me</a>
+                <a href="#skills" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_skills">Technical Skills</a>
+                <a href="#projects" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_projects">Projects</a>
+                <a href="#experience" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_experience">Experience</a>
+                <a href="#contact" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_contact">Contact</a>
+                <div class="flex items-center justify-between pt-4">
+                    <button id="mobile-theme-toggle" class="text-slate-600 hover:text-blue-600 transition">
+                        <i class="fas fa-moon" id="mobile-theme-icon"></i>
+                    </button>
+                    <div class="flex items-center space-x-4">
+                        <button class="lang-btn active-lang" data-lang="es">ES</button>
+                        <span class="text-slate-400">|</span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="relative overflow-hidden pt-32 pb-20 px-6">
+
+
+    <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-12 md:mb-0">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4" data-key="hero_title">Hola, soy <span class="gradient-text">Marco Ortega</span></h1>
+            <h2 class="text-2xl md:text-3xl text-slate-300 mb-6" data-key="hero_subtitle">Desarrollador <span class="text-blue-400">PHP Semi-Senior</span></h2>
+            <p class="text-lg text-slate-400 mb-8 max-w-lg" data-key="hero_paragraph">Con más de 8 años de experiencia dedicada en desarrollo web, me especializo en la creación de soluciones robustas, escalables y de alto rendimiento que impulsan el crecimiento empresarial y la interacción del usuario.</p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+    <a href="#contact" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition text-center" data-key="btn_contact">Contáctame</a>
+    <a href="#experience" class="px-6 py-3 border border-slate-600 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition text-center" data-key="btn_experience">Mi Experiencia</a>
+</div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+            <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-700">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-20"></div>
+                <img src="https://scontent.fmex12-1.fna.fbcdn.net/v/t39.30808-6/434848199_972112041231042_2878952145596464620_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=5wAUWGBT-mEQ7kNvwHOTvnY&_nc_oc=AdnID2tbmFMGbFYq18NaUokv_DQvsHNMm57nG1PWJG2vY6_e71n-4lof9XwTPau_c9g&_nc_zt=23&_nc_ht=scontent.fmex12-1.fna&_nc_gid=q5I4VkETut1yjbpqvgJXVw&oh=00_AfOM4VGp0U7M3J8j81A4H7-IPz-v8Z28ZmFlSiBlC0qEDA&oe=685BFDB4" 
+                     alt="Marco Medina" 
+                     class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="about" class="py-20 px-6 bg-slate-800/50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-key="about_title"><span class="gradient-text">About Me</span></h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-400" data-key="about_personal_info_title">Personal Information</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-user mr-3 text-purple-500 w-5"></i>
+                            <span data-key="about_full_name">Marco Antonio Medina Ortega</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-purple-500 w-5"></i>
+                            <span data-key="about_email">joungmac4@gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-language mr-3 text-purple-500 w-5"></i>
+                            <span data-key="about_english_level">Intermediate English Proficiency</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-briefcase mr-3 text-purple-500 w-5"></i>
+                            <span data-key="about_experience_years">8+ Years of Web Development Experience</span>
+                        </li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-semibold mt-8 mb-4 text-blue-400" data-key="about_education_title">Education & Certifications</h3>
+                    <div class="space-y-4">
+                        <div class="bg-slate-800 p-4 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-medium" data-key="about_computer_technician">Computer Technician</h4>
+                            <p class="text-slate-400" data-key="about_cbt_school">CBT Dr. Alfonso León de Garay</p>
+                            <p class="text-sm text-slate-500" data-key="about_tech_duration">2010 - 2013</p>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-lg border-l-4 border-purple-500">
+                            <h4 class="font-medium" data-key="about_computer_engineer">Computer Systems Engineer</h4>
+                            <p class="text-slate-400" data-key="about_university_inace">University INACE</p>
+                            <p class="text-sm text-slate-500" data-key="about_engineer_duration">2013 - 2018</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-400" data-key="about_other_skills_title">Soft Skills</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flip-card w-full h-32">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front bg-slate-800 rounded-lg p-4 flex flex-col items-center justify-center border border-slate-700">
+                                    <i class="fas fa-lightbulb text-3xl text-yellow-400 mb-2"></i>
+                                    <p class="text-center" data-key="skill_problem_solving">Problem-Solving</p>
+                                </div>
+                                <div class="flip-card-back bg-slate-700 rounded-lg p-4 flex items-center justify-center border border-blue-500">
+                                    <p class="text-sm text-center" data-key="skill_problem_solving_desc">Adept at identifying complex technical challenges and implementing efficient, innovative solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card w-full h-32">
+                            <div class="flip-card-inner w-full h-full">
+                                <div class="flip-card-front bg-slate-800 rounded-lg p-4 flex flex-col items-center justify-center border border-slate-700">
+                                    <i class="fas fa-users text-3xl text-blue-400 mb-2"></i>
+                                    <p class="text-center" data-key="skill_teamwork">Collaborative Teamwork</p>
+                                </div>
+                                <div class="flip-card-back bg-slate-700 rounded-lg p-4 flex items-center justify-center border border-purple-500">
+                                    <p class="text-sm text-center" data-key="skill_teamwork_desc">Effective collaborator with strong communication skills, fostering productive team environments.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card w-full h-32">
+                            <div class="flip-card-inner w-full h-full">
+                                <div class="flip-card-front bg-slate-800 rounded-lg p-4 flex flex-col items-center justify-center border border-slate-700">
+                                    <i class="fas fa-brain text-3xl text-purple-400 mb-2"></i>
+                                    <p class="text-center" data-key="skill_self_learning">Continuous Learning</p>
+                                </div>
+                                <div class="flip-card-back bg-slate-700 rounded-lg p-4 flex items-center justify-center border border-blue-500">
+                                    <p class="text-sm text-center" data-key="skill_self_learning_desc">Proactive and self-motivated in acquiring new technologies and methodologies to stay at the forefront.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card w-full h-32">
+                            <div class="flip-card-inner w-full h-full">
+                                <div class="flip-card-front bg-slate-800 rounded-lg p-4 flex flex-col items-center justify-center border border-slate-700">
+                                    <i class="fas fa-chart-line text-3xl text-green-400 mb-2"></i>
+                                    <p class="text-center" data-key="skill_analytical_skills">Analytical Acumen</p>
+                                </div>
+                                <div class="flip-card-back bg-slate-700 rounded-lg p-4 flex items-center justify-center border border-purple-500">
+                                    <p class="text-sm text-center" data-key="skill_analytical_skills_desc">Skilled in data and system analysis to inform robust technical decision-making and optimization.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold mt-8 mb-4 text-blue-400" data-key="about_international_projects_title">International Project Exposure</h3>
+                    <div class="bg-slate-800 p-4 rounded-lg">
+                        <p class="mb-3" data-key="about_international_projects_desc">He contribuido exitosamente en proyectos en diversos mercados internacionales, incluyendo:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm" data-key="country_united_states">United States</span>
+                            <span class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-sm" data-key="country_spain">Spain</span>
+                            <span class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-sm" data-key="country_colombia">Colombia</span>
+                            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-300 rounded-full text-sm" data-key="country_mexico">Mexico</span>
+                            <span class="px-3 py-1 bg-red-900/50 text-red-300 rounded-full text-sm" data-key="country_peru">Peru</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-key="skills_title"><span class="gradient-text">Technical Skills</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-8">
+                    <div class="animate-fade-in-up bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition hover-grow" style="animation-delay: 0.1s">
+                    <div class="flex items-center mb-4">
+                        <i class="fab fa-php text-3xl text-purple-500 mr-3"></i>
+                        <h3 class="text-xl font-semibold" data-key="skills_php">PHP Development</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_php_oop">PHP, Object-Oriented Programming (OOP)</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_codeigniter_framework">CodeIgniter Framework</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_laravel_framework">Laravel Framework</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_wordpress_cms">WordPress CMS</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                    <div class="animate-fade-in-up bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition hover-grow" style="animation-delay: 0.2s">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-code text-3xl text-blue-400 mr-3"></i>
+                        <h3 class="text-xl font-semibold" data-key="skills_frontend_title">Frontend Development</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_html_css_basics">HTML5/CSS3</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_javascript_basics">JavaScript ES6+</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_jquery_library">jQuery Library</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_bootstrap_framework">Bootstrap Framework</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="animate-fade-in-up bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition hover-grow" style="animation-delay: 0.3s">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-database text-3xl text-green-400 mr-3"></i>
+                        <h3 class="text-xl font-semibold" data-key="skills_database_apis_title">Database & API Integration</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_mysql_db">MySQL Database</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_rest_apis">RESTful APIs</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_web_services">Web Services Integration</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_github_version_control">Git & GitHub Version Control</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                    <div class="animate-fade-in-up bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition hover-grow" style="animation-delay: 0.4s">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-tools text-3xl text-yellow-400 mr-3"></i>
+                        <h3 class="text-xl font-semibold" data-key="skills_additional_title">Complementary Skills</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_powerbi_tool">Power BI Data Visualization</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_data_analysis">Data Analysis & Reporting</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_seo">Search Engine Optimization (SEO)</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-key="skills_ui_ux">UI/UX Principles</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 bg-slate-800/50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-key="projects_title"><span class="gradient-text">Featured Projects</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="animate-fade-in-up project-card bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500 transition-all duration-300" style="animation-delay: 0.1s">
+                    <div class="h-48 bg-gradient-to-br from-blue-900/30 to-purple-900/30 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-6xl text-blue-400 opacity-70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" data-key="project_crm_system_title">Custom CRM Solution</h3>
+                        <p class="text-slate-400 mb-4" data-key="project_crm_system_desc">Developed a robust custom CRM system using PHP and CodeIgniter, streamlining client management and enhancing sales tracking for businesses.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">E-invoicing</span>
+                            <span class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm">CodeIgniter</span>
+                            <span class="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-sm">MySQL</span>
+                        </div>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center transition" data-key="view_details">
+                            View Project Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="animate-fade-in-up project-card bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all duration-300" style="animation-delay: 0.2s">
+                    <div class="h-48 bg-gradient-to-br from-purple-900/30 to-blue-900/30 flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-6xl text-purple-400 opacity-70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" data-key="project_e_commerce_title">E-commerce Platform Development</h3>
+                        <p class="text-slate-400 mb-4" data-key="project_e_commerce_desc">Engineered a comprehensive online store, integrating secure payment gateways and efficient inventory management functionalities.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">Laravel</span>
+                            <span class="px-3 py-1 bg-yellow-900/30 text-yellow-300 rounded-full text-sm">Mercado Pago</span>
+                            <span class="px-3 py-1 bg-red-900/30 text-red-300 rounded-full text-sm">Stripe API</span>
+                        </div>
+                        <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center transition" data-key="view_details">
+                            View Project Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="animate-fade-in-up project-card bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500 transition-all duration-300" style="animation-delay: 0.3s">
+                    <div class="h-48 bg-gradient-to-br from-blue-900/30 to-green-900/30 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-6xl text-green-400 opacity-70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" data-key="project_business_analytics_title">Advanced Business Analytics Dashboard</h3>
+                        <p class="text-slate-400 mb-4" data-key="project_business_analytics_desc">Designed and implemented a data visualization platform delivering real-time metrics, insightful analytics, and custom reporting tools.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-sm">CodeIgniter</span>
+                            <span class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">Zoho</span>
+                            <span class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm">REST API</span>
+                        </div>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center transition" data-key="view_details">
+                            View Project Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="animate-fade-in-up project-card bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all duration-300" style="animation-delay: 0.4s">
+                    <div class="h-48 bg-gradient-to-br from-purple-900/30 to-pink-900/30 flex items-center justify-center">
+                        <i class="fas fa-images text-6xl text-pink-400 opacity-70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" data-key="project_tourism_image_bank_title">Tourism Media Management System</h3>
+                        <p class="text-slate-400 mb-4" data-key="project_tourism_image_bank_desc">Built a specialized media management system for the Secretary of Tourism, featuring advanced search capabilities for efficient image organization and retrieval.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm">CodeIgniter</span>
+                            <span class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">REST API</span>
+                            <span class="px-3 py-1 bg-gray-900/30 text-gray-300 rounded-full text-sm">Database</span>
+                        </div>
+                        <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center transition" data-key="view_details">
+                            View Project Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-slate-600 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition" data-key="view_all_projects">
+                    <i class="fab fa-github mr-2"></i> Explore All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 px-6 bg-slate-800/50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-key="experience_title"><span class="gradient-text">Professional Experience</span></h2>
+            
+            <div class="relative timeline pl-8 md:pl-16">
+                <div class="relative timeline-item mb-12">
+                    <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-blue-500 shadow-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-semibold" data-key="experience_current_job_title">Mid-Senior PHP Developer</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full" data-key="experience_current_job_duration">2024 - Present</span>
+                        </div>
+                        <h4 class="text-blue-400 mb-3" data-key="experience_current_job_company">MITRA S.A. de C.V. - Full Time</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-slate-300">
+                            <li data-key="experience_current_job_task1">Led maintenance and feature implementation for CRM Alphamitra, enhancing system functionality and user experience.</li>
+                            <li data-key="experience_current_job_task2">Developed and automated comprehensive reports, providing critical data insights for strategic decision-making.</li>
+                            <li data-key="experience_current_job_task3">Integrated various external services via robust APIs, ensuring seamless data flow and expanded system capabilities.</li>
+                            <li data-key="experience_current_job_task4">Conducted thorough documentation and data mapping, improving system transparency and maintainability.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="relative timeline-item mb-12">
+                    <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-purple-500 shadow-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-semibold" data-key="experience_part_time_job_title">Fullstack Developer</h3>
+                            <span class="text-sm bg-purple-100 text-purple-800 px-3 py-1 rounded-full" data-key="experience_part_time_job_duration">2023 - Present</span>
+                        </div>
+                        <h4 class="text-purple-400 mb-3" data-key="experience_part_time_job_company">Atlantl México - Part Time</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-slate-300">
+                            <li data-key="experience_part_time_job_task1">Developed and optimized custom extensions for Zoho, enhancing CRM functionality and efficiency.</li>
+                            <li data-key="experience_part_time_job_task2">Spearheaded e-commerce development projects, from concept to deployment, ensuring robust and scalable online retail solutions.</li>
+                            <li data-key="experience_part_time_job_task3">Managed comprehensive documentation and gathered precise requirements, ensuring project alignment with business objectives.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="relative timeline-item mb-12">
+                    <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-blue-500 shadow-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-semibold" data-key="experience_behavior_digital_title">Fullstack Developer</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full" data-key="experience_behavior_digital_duration">2020 - Present</span>
+                        </div>
+                        <h4 class="text-blue-400 mb-3" data-key="experience_behavior_digital_company">Behavior Digital</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-slate-300">
+                            <li data-key="experience_behavior_digital_task1">Designed, developed, and maintained web applications and e-commerce platforms, ensuring high performance and user satisfaction.</li>
+                            <li data-key="experience_behavior_digital_task2">Managed and administered server environments, optimizing performance and ensuring system stability.</li>
+                            <li data-key="experience_behavior_digital_task3">Orchestrated and managed virtual events, including technical setup and platform support.</li>
+                            <li data-key="experience_behavior_digital_task4">Developed a specialized image bank for the Secretary of Tourism, facilitating efficient media asset management.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="relative timeline-item mb-12">
+                    <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-purple-500 shadow-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-semibold" data-key="experience_colibri_creativos_title">Frontend Developer</h3>
+                            <span class="text-sm bg-purple-100 text-purple-800 px-3 py-1 rounded-full" data-key="experience_colibri_creativos_duration">2018 - 2024</span>
+                        </div>
+                        <h4 class="text-purple-400 mb-3" data-key="experience_colibri_creativos_company">Colibrí Creativos</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-slate-300">
+                            <li data-key="experience_colibri_creativos_task1">Led end-to-end web development projects, focusing on responsive design and intuitive user interfaces.</li>
+                            <li data-key="experience_colibri_creativos_task2">Implemented advanced SEO strategies and site optimization techniques to improve web presence and search rankings.</li>
+                            <li data-key="experience_colibri_creativos_task3">Developed and customized CRM and e-commerce solutions, enhancing client engagement and sales processes.</li>
+                            <li data-key="experience_colibri_creativos_task4">Performed comprehensive server administration, ensuring optimal website performance and security.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="relative timeline-item">
+                    <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-blue-500 shadow-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-semibold" data-key="experience_ed_camp_glifo_title">Backend Developer</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full" data-key="experience_ed_camp_glifo_duration">2016 - 2018</span>
+                        </div>
+                        <h4 class="text-blue-400 mb-3" data-key="experience_ed_camp_glifo_company">Glifo Media</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-slate-300">
+                            <li data-key="experience_ed_camp_glifo_task1">Developed and maintained robust web applications, ensuring high reliability and efficient data processing.</li>
+                            <li data-key="experience_ed_camp_glifo_task2">Created and optimized REST APIs, facilitating seamless integration between systems and third-party services.</li>
+                            <li data-key="experience_ed_camp_glifo_task3">Designed and managed complex databases, ensuring data integrity, scalability, and performance.</li>
+                            <li data-key="experience_ed_camp_glifo_task4">Provided crucial maintenance and technical support, resolving issues promptly and ensuring continuous operation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-key="contact_title"><span class="gradient-text">Let's Connect</span></h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <div class="bg-slate-800 rounded-xl p-8 h-full">
+                        <h3 class="text-xl font-semibold mb-6 text-center" data-key="contact_info_title">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-blue-900/30 flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-blue-400 contact-icon"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium" data-key="contact_email_section_title">Email Address</h4>
+                                    <p class="text-slate-400" data-key="contact_email_value">joungmac4@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center mr-4">
+                                    <i class="fas fa-globe text-purple-400 contact-icon"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium" data-key="contact_based_in_title">Location</h4>
+                                    <p class="text-slate-400" data-key="contact_based_in_value">Mexico</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-green-900/30 flex items-center justify-center mr-4">
+                                    <i class="fas fa-language text-green-400 contact-icon"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium" data-key="contact_languages_title">Languages</h4>
+                                    <p class="text-slate-400" data-key="contact_languages_text">Spanish (Native), English (Intermediate)</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-medium mb-4 text-center" data-key="contact_connect_title">Connect with Me</h4>
+                            <div class="flex justify-center space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-blue-600 flex items-center justify-center transition">
+                                    <i class="fab fa-linkedin-in text-white social-icon"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-blue-400 flex items-center justify-center transition">
+                                    <i class="fab fa-twitter text-white social-icon"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-gray-800 flex items-center justify-center transition">
+                                    <i class="fab fa-github text-white social-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-slate-800 rounded-xl p-8 h-full">
+                        <h3 class="text-xl font-semibold mb-6 text-center" data-key="contact_send_message_title">Send Me a Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block mb-2 text-sm font-medium" data-key="contact_name_label">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your name" data-key="contact_name_placeholder">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block mb-2 text-sm font-medium" data-key="contact_email_label">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your email address" data-key="contact_email_placeholder">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block mb-2 text-sm font-medium" data-key="contact_subject_label">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Job Opportunity / Project Inquiry" data-key="contact_subject_placeholder">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block mb-2 text-sm font-medium" data-key="contact_message_label">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Share your project details or message here..." data-key="contact_message_placeholder"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition" data-key="contact_send_button">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 py-8 px-6 border-t border-slate-800">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-2xl font-bold gradient-text">Marco Ortega</a>
+                    <p class="text-slate-400 mt-2" data-key="hero_subtitle">Mid-Senior PHP Developer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#about" class="text-slate-400 hover:text-white transition" data-key="menu_about">About Me</a>
+                    <a href="#skills" class="text-slate-400 hover:text-white transition" data-key="menu_skills">Technical Skills</a>
+                    <a href="#experience" class="text-slate-400 hover:text-white transition" data-key="menu_experience">Experience</a>
+                    <a href="#contact" class="text-slate-400 hover:text-white transition" data-key="menu_contact">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500">
+                <p data-key="footer_rights">&copy; 2023 Marco Antonio Medina Ortega. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+
+    // Animate skill bars on scroll
+    const skillBars = document.querySelectorAll('.skill-progress');
+    const animateSkillBars = () => {
+        skillBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0%';
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 100);
+        });
+    };
+
+    const skillsSection = document.getElementById('skills');
+    if (skillsSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkillBars();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        observer.observe(skillsSection);
+    }
+
+    // Language switcher
+    const langButtons = document.querySelectorAll('.lang-btn');
+    let lang = localStorage.getItem('selectedLang') || 'es'; // Get saved language or default to 'es'
+
+    function setLanguageActiveButton() {
+        langButtons.forEach(b => {
+            if (b.getAttribute('data-lang') === lang) {
+                b.classList.add('active-lang');
+            } else {
+                b.classList.remove('active-lang');
+            }
+        });
+    }
+
+    function loadLanguage() {
+        fetch('lang.json')
+            .then(response => response.json())
+            .then(data => {
+                document.querySelectorAll('[data-key]').forEach(el => {
+                    const key = el.getAttribute('data-key');
+                    if (data[lang] && data[lang][key]) {
+                        el.innerHTML = data[lang][key];
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading language file:', error));
+    }
+
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            lang = this.getAttribute('data-lang');
+            localStorage.setItem('selectedLang', lang); // Save selected language
+            setLanguageActiveButton();
+            loadLanguage();
+        });
+    });
+
+    // Initial load
+    setLanguageActiveButton(); // Set active button on page load
+    loadLanguage();
+
+    // Intersection Observer for fade-in animations
+    const animateObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                animateObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-fade-in-up').forEach(el => {
+        animateObserver.observe(el);
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+
+    function setTheme(theme) {
+        if (theme === 'light') {
+            document.body.classList.add('light-mode');
+            document.body.classList.remove('dark-mode');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+            mobileThemeIcon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode');
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
+            mobileThemeIcon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    function toggleTheme() {
+        if (document.body.classList.contains('light-mode')) {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    }
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+
+    themeToggle.addEventListener('click', toggleTheme);
+    mobileThemeToggle.addEventListener('click', toggleTheme);
+
+});
+</script>
+
+
+</body>
+</html>
