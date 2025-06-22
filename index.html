@@ -19,20 +19,20 @@
         }
         
         .gradient-text {
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #3b82f6;
-}
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #3b82f6;
+        }
 
         body.dark-mode .gradient-text {
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #3b82f6;
-}
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #3b82f6;
+        }
         
         .timeline-item::before {
             content: '';
@@ -150,113 +150,110 @@
         }
 
         /* Light theme styles */
+        body.light-mode {
+            background-color: #ffffff;
+            color: #334155;
+        }
+        body.light-mode header {
+            background-color: #ffffff !important;
+            border-color: #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        body.light-mode .bg-slate-800,
+        body.light-mode .bg-slate-800\/50,
+        body.light-mode .bg-slate-700,
+        body.light-mode .bg-slate-900 {
+            background-color: #f8fafc !important;
+            color: #334155;
+            border-color: #e2e8f0;
+        }
+        body.light-mode .text-slate-300 {
+            color: #475569;
+        }
+        body.light-mode .text-slate-400 {
+            color: #64748b;
+        }
+        body.light-mode .text-slate-500 {
+            color: #64748b;
+        }
+        body.light-mode .skill-bar {
+            background-color: #e2e8f0;
+        }
+        body.light-mode .timeline::before {
+            background: #e2e8f0;
+        }
+        body.light-mode .timeline-item::before {
+            border-color: #ffffff;
+            background: #3b82f6;
+        }
+        body.light-mode .gradient-text {
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #2563eb;
+        }
+        body.light-mode .border-slate-700,
+        body.light-mode .border-slate-600 {
+            border-color: #cbd5e1;
+        }
+        body.light-mode .text-blue-400 {
+            color: #2563eb;
+        }
+        body.light-mode .text-purple-400 {
+            color: #7c3aed;
+        }
+        body.light-mode .text-green-400 {
+            color: #059669;
+        }
+        body.light-mode .text-yellow-400 {
+            color: #ca8a04;
+        }
+        body.light-mode .text-pink-400 {
+            color: #d946ef;
+        }
+        body.light-mode .bg-blue-900\/30,
+        body.light-mode .bg-purple-900\/30,
+        body.light-mode .bg-green-900\/30,
+        body.light-mode .bg-yellow-900\/30,
+        body.light-mode .bg-red-900\/30,
+        body.light-mode .bg-pink-900\/30,
+        body.light-mode .bg-gray-900\/30 {
+            background-color: #e2e8f0 !important;
+            color: #334155;
+        }
+        body.light-mode .flip-card-front {
+            background-color: #f1f5f9;
+            color: #334155;
+            border-color: #cbd5e1;
+        }
+        body.light-mode .flip-card-back {
+            background-color: #e2e8f0;
+            color: #334155;
+        }
+        body.light-mode footer {
+            background-color: #f1f5f9 !important;
+            border-color: #e2e8f0;
+        }
+        body.light-mode footer p,
+        body.light-mode footer a {
+            color: #64748b;
+        }
+        /* Iconos en sección Contact en tema claro */
+        body.light-mode .contact-icon.text-blue-400 {
+            color: #2563eb !important;
+        }
+        body.light-mode .contact-icon.text-purple-400 {
+            color: #7c3aed !important;
+        }
+        body.light-mode .contact-icon.text-green-400 {
+            color: #059669 !important;
+        }
+        /* Iconos de redes sociales en tema claro */
+        body.light-mode .social-icon {
+            color: #334155 !important;
+        }
         
-body.light-mode {
-    background-color: #ffffff;
-    color: #334155;
-}
-body.light-mode header {
-    background-color: #ffffff !important;
-    border-color: #e2e8f0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-body.light-mode .bg-slate-800,
-body.light-mode .bg-slate-800\/50,
-body.light-mode .bg-slate-700,
-body.light-mode .bg-slate-900 {
-    background-color: #f8fafc !important;
-    color: #334155;
-    border-color: #e2e8f0;
-}
-body.light-mode .text-slate-300 {
-    color: #475569;
-}
-body.light-mode .text-slate-400 {
-    color: #64748b;
-}
-body.light-mode .text-slate-500 {
-    color: #64748b;
-}
-body.light-mode .skill-bar {
-    background-color: #e2e8f0;
-}
-body.light-mode .timeline::before {
-    background: #e2e8f0;
-}
-body.light-mode .timeline-item::before {
-    border-color: #ffffff;
-    background: #3b82f6;
-}
-body.light-mode .gradient-text {
-    background: linear-gradient(90deg, #2563eb, #7c3aed);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #2563eb;
-}
-body.light-mode .border-slate-700,
-body.light-mode .border-slate-600 {
-    border-color: #cbd5e1;
-}
-body.light-mode .text-blue-400 {
-    color: #2563eb;
-}
-body.light-mode .text-purple-400 {
-    color: #7c3aed;
-}
-body.light-mode .text-green-400 {
-    color: #059669;
-}
-body.light-mode .text-yellow-400 {
-    color: #ca8a04;
-}
-body.light-mode .text-pink-400 {
-    color: #d946ef;
-}
-body.light-mode .bg-blue-900\/30,
-body.light-mode .bg-purple-900\/30,
-body.light-mode .bg-green-900\/30,
-body.light-mode .bg-yellow-900\/30,
-body.light-mode .bg-red-900\/30,
-body.light-mode .bg-pink-900\/30,
-body.light-mode .bg-gray-900\/30 {
-    background-color: #e2e8f0 !important;
-    color: #334155;
-}
-body.light-mode .flip-card-front {
-    background-color: #f1f5f9;
-    color: #334155;
-    border-color: #cbd5e1;
-}
-body.light-mode .flip-card-back {
-    background-color: #e2e8f0;
-    color: #334155;
-}
-body.light-mode footer {
-    background-color: #f1f5f9 !important;
-    border-color: #e2e8f0;
-}
-body.light-mode footer p,
-body.light-mode footer a {
-    color: #64748b;
-}
-/* Iconos en sección Contact en tema claro */
-body.light-mode .contact-icon.text-blue-400 {
-    color: #2563eb !important;
-}
-body.light-mode .contact-icon.text-purple-400 {
-    color: #7c3aed !important;
-}
-body.light-mode .contact-icon.text-green-400 {
-    color: #059669 !important;
-}
-/* Iconos de redes sociales en tema claro */
-body.light-mode .social-icon {
-    color: #334155 !important;
-}
-
-
-
         body.light-mode .border-slate-700,
         body.light-mode .border-slate-600 {
             border-color: #cbd5e1;
@@ -276,6 +273,45 @@ body.light-mode .social-icon {
         body.light-mode h4 {
             color: #1e293b;
         }
+
+        /* Estilos para el botón "Contáctame" en modo claro */
+        body.light-mode a[data-key="text_04"] {
+            background-color: #2563eb; /* blue-600 */
+            color: #ffffff;
+        }
+        body.light-mode a[data-key="text_04"]:hover {
+            background-color: #1d4ed8; /* blue-700 */
+        }
+
+        /* Estilos para el botón "Mi Experiencia" en modo claro */
+        body.light-mode a[data-key="text_05"] {
+            border-color: #cbd5e1; /* slate-300 */
+            color: #334155; /* slate-700 */
+            background-color: transparent; /* Asegúrate que no tenga un fondo oscuro por defecto */
+        }
+        body.light-mode a[data-key="text_05"]:hover {
+            background-color: #dbeafe; /* blue-100 */
+            color: #1d4ed8; /* blue-700 */
+            border-color: #93c5fd; /* blue-300 para el hover del borde */
+        }
+
+        /* Ajustes específicos para el footer en móvil */
+        @media (max-width: 767px) { /* Tailwind's default 'md' breakpoint is 768px */
+            footer .flex-col > * {
+                text-align: center; /* Centra el texto del logo y copyright */
+                margin-bottom: 0.5rem; /* Ajusta el espacio entre elementos apilados */
+            }
+            footer .flex.space-x-6 {
+                flex-wrap: wrap; /* Permite que los enlaces se envuelvan si hay muchos */
+                justify-content: center; /* Centra los enlaces */
+                gap: 0.75rem 1rem; /* Espacio entre los enlaces, ajustado para wrap */
+                margin-top: 1rem; /* Espacio entre el logo y los enlaces */
+            }
+            footer .border-t {
+                margin-top: 1.5rem; /* Ajusta el margen superior de la línea divisoria */
+                padding-top: 1.5rem; /* Ajusta el padding superior de la línea divisoria */
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen dark-mode">
@@ -283,12 +319,14 @@ body.light-mode .social-icon {
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <a href="#" class="text-2xl font-bold gradient-text">Marco Ortega</a>
+                
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_about">About Me</a>
-                    <a href="#skills" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_skills">Technical Skills</a>
-                    <a href="#projects" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_projects">Projects</a>
-                    <a href="#experience" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_experience">Experience</a>
-                    <a href="#contact" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_contact">Contact</a>
+                    <a href="#about" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_about"></a>
+                    <a href="#skills" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_skills"></a>
+                    <a href="#projects" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_projects"></a>
+                    <a href="#experience" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_experience"></a>
+                    <a href="#contact" class="text-slate-700 hover:text-blue-600 transition font-medium" data-key="menu_contact"></a>
+                    
                     <div class="flex items-center space-x-4 ml-4">
                         <button id="theme-toggle" class="text-slate-300 hover:text-white transition">
                             <i class="fas fa-moon" id="theme-icon"></i>
@@ -300,47 +338,46 @@ body.light-mode .social-icon {
                         </div>
                     </div>
                 </div>
-                <button id="mobile-menu-button" class="md:hidden text-slate-300">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-                <a href="#about" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_about">About Me</a>
-                <a href="#skills" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_skills">Technical Skills</a>
-                <a href="#projects" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_projects">Projects</a>
-                <a href="#experience" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_experience">Experience</a>
-                <a href="#contact" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_contact">Contact</a>
-                <div class="flex items-center justify-between pt-4">
-                    <button id="mobile-theme-toggle" class="text-slate-600 hover:text-blue-600 transition">
-                        <i class="fas fa-moon" id="mobile-theme-icon"></i>
+
+                <div class="flex items-center space-x-4 md:hidden">
+                    <button id="mobile-theme-toggle-header" class="text-slate-300 hover:text-white transition">
+                        <i class="fas fa-moon" id="mobile-theme-icon-header"></i>
                     </button>
-                    <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
                         <button class="lang-btn active-lang" data-lang="es">ES</button>
                         <span class="text-slate-400">|</span>
                         <button class="lang-btn" data-lang="en">EN</button>
                     </div>
+                    <button id="mobile-menu-button" class="text-slate-300">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
                 </div>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#about" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_about"></a>
+                <a href="#skills" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_skills"></a>
+                <a href="#projects" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_projects"></a>
+                <a href="#experience" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_experience"></a>
+                <a href="#contact" class="block py-2 text-slate-600 hover:text-blue-600 transition" data-key="menu_contact"></a>
             </div>
         </nav>
     </header>
 
     <section class="relative overflow-hidden pt-32 pb-20 px-6">
-
-
     <div class="container mx-auto flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-12 md:mb-0">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4" data-key="hero_title">Hola, soy <span class="gradient-text">Marco Ortega</span></h1>
-            <h2 class="text-2xl md:text-3xl text-slate-300 mb-6" data-key="hero_subtitle">Desarrollador <span class="text-blue-400">PHP Semi-Senior</span></h2>
-            <p class="text-lg text-slate-400 mb-8 max-w-lg" data-key="hero_paragraph">Con más de 8 años de experiencia dedicada en desarrollo web, me especializo en la creación de soluciones robustas, escalables y de alto rendimiento que impulsan el crecimiento empresarial y la interacción del usuario.</p>
-            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-    <a href="#contact" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition text-center" data-key="btn_contact">Contáctame</a>
-    <a href="#experience" class="px-6 py-3 border border-slate-600 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition text-center" data-key="btn_experience">Mi Experiencia</a>
-</div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4" data-key="hero_title"></h1>
+            <h2 class="text-2xl md:text-3xl text-slate-300 mb-6" data-key="hero_subtitle"></h2>
+            <p class="text-lg text-slate-400 mb-8 max-w-lg" data-key="about_paragraph"></p> <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
+                <a href="#contact" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition text-center flex-1 whitespace-nowrap" data-key="btn_contact"></a>
+                <a href="#experience" class="px-6 py-3 border border-slate-600 hover:bg-slate-700 text-white hover:text-blue-200 rounded-lg font-medium transition text-center flex-1 whitespace-nowrap" data-key="btn_experience"></a>
+            </div>
         </div>
         <div class="md:w-1/2 flex justify-center">
             <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-700">
                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-20"></div>
-                <img src="https://scontent.fmex12-1.fna.fbcdn.net/v/t39.30808-6/434848199_972112041231042_2878952145596464620_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=5wAUWGBT-mEQ7kNvwHOTvnY&_nc_oc=AdnID2tbmFMGbFYq18NaUokv_DQvsHNMm57nG1PWJG2vY6_e71n-4lof9XwTPau_c9g&_nc_zt=23&_nc_ht=scontent.fmex12-1.fna&_nc_gid=q5I4VkETut1yjbpqvgJXVw&oh=00_AfOM4VGp0U7M3J8j81A4H7-IPz-v8Z28ZmFlSiBlC0qEDA&oe=685BFDB4" 
+                <img src="https://scontent.fmex12-1.fna.fbcdn.net/v/t39.30808-6/434848199_972112041231042_2878952145596464620_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=5wAUWGBT-mEQ7kNvwHOTvnY&_nc_oc=AdnID2tbmFMGbFYq18NaUokv_DQvsHNMm57nG1PWJG2vY6_e71n-4lof9XwTPau_c9g&_nc_zt=23&&_nc_ht=scontent.fmex12-1.fna&_nc_gid=q5I4VkETut1yjbpqvgJXVw&oh=00_AfOM4VGp0U7M3J8j81A4H7-IPz-v8Z28ZmFlSiBlC0qEDA&oe=685BFDB4" 
                      alt="Marco Medina" 
                      class="w-full h-full object-cover">
             </div>
@@ -351,54 +388,54 @@ body.light-mode .social-icon {
 
     <section id="about" class="py-20 px-6 bg-slate-800/50">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center" data-key="about_title"><span class="gradient-text">About Me</span></h2>
+            <h2 class="text-3xl font-bold mb-12 text-center" data-key="about_title"></h2>
             <div class="flex flex-col md:flex-row gap-12">
                 <div class="md:w-1/2">
-                    <h3 class="text-xl font-semibold mb-4 text-blue-400" data-key="about_personal_info_title">Personal Information</h3>
+                    <h3 class="text-xl font-semibold mb-4 text-blue-400" data-key="about_personal_info_title"></h3>
                     <ul class="space-y-3">
                         <li class="flex items-center">
                             <i class="fas fa-user mr-3 text-purple-500 w-5"></i>
-                            <span data-key="about_full_name">Marco Antonio Medina Ortega</span>
+                            <span data-key="about_full_name"></span>: Marco Antonio Medina Ortega
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-3 text-purple-500 w-5"></i>
-                            <span data-key="about_email">joungmac4@gmail.com</span>
+                            <span data-key="about_email"></span>: joungmac4@gmail.com
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-language mr-3 text-purple-500 w-5"></i>
-                            <span data-key="about_english_level">Intermediate English Proficiency</span>
+                            <span data-key="about_english_level"></span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-briefcase mr-3 text-purple-500 w-5"></i>
-                            <span data-key="about_experience_years">8+ Years of Web Development Experience</span>
+                            <span data-key="about_experience_years"></span>
                         </li>
                     </ul>
                     
-                    <h3 class="text-xl font-semibold mt-8 mb-4 text-blue-400" data-key="about_education_title">Education & Certifications</h3>
+                    <h3 class="text-xl font-semibold mt-8 mb-4 text-blue-400" data-key="about_education_title"></h3>
                     <div class="space-y-4">
                         <div class="bg-slate-800 p-4 rounded-lg border-l-4 border-blue-500">
-                            <h4 class="font-medium" data-key="about_computer_technician">Computer Technician</h4>
-                            <p class="text-slate-400" data-key="about_cbt_school">CBT Dr. Alfonso León de Garay</p>
-                            <p class="text-sm text-slate-500" data-key="about_tech_duration">2010 - 2013</p>
+                            <h4 class="font-medium" data-key="about_computer_technician"></h4>
+                            <p class="text-slate-400" data-key="about_cbt_school"></p>
+                            <p class="text-sm text-slate-500" data-key="about_tech_duration"></p>
                         </div>
                         <div class="bg-slate-800 p-4 rounded-lg border-l-4 border-purple-500">
-                            <h4 class="font-medium" data-key="about_computer_engineer">Computer Systems Engineer</h4>
-                            <p class="text-slate-400" data-key="about_university_inace">University INACE</p>
-                            <p class="text-sm text-slate-500" data-key="about_engineer_duration">2013 - 2018</p>
+                            <h4 class="font-medium" data-key="about_computer_engineer"></h4>
+                            <p class="text-slate-400" data-key="about_university_inace"></p>
+                            <p class="text-sm text-slate-500" data-key="about_engineer_duration"></p>
                         </div>
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <h3 class="text-xl font-semibold mb-4 text-blue-400" data-key="about_other_skills_title">Soft Skills</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-400" data-key="about_other_skills_title"></h3>
+                    <div class="grid grid-cols-2 gap-4">
                         <div class="flip-card w-full h-32">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front bg-slate-800 rounded-lg p-4 flex flex-col items-center justify-center border border-slate-700">
                                     <i class="fas fa-lightbulb text-3xl text-yellow-400 mb-2"></i>
-                                    <p class="text-center" data-key="skill_problem_solving">Problem-Solving</p>
+                                    <p class="text-center" data-key="skill_problem_solving"></p>
                                 </div>
                                 <div class="flip-card-back bg-slate-700 rounded-lg p-4 flex items-center justify-center border border-blue-500">
-                                    <p class="text-sm text-center" data-key="skill_problem_solving_desc">Adept at identifying complex technical challenges and implementing efficient, innovative solutions.</p>
+                                    <p class="text-sm text-center" data-key="skill_problem_solving_desc"></p>
                                 </div>
                             </div>
                         </div>
@@ -406,10 +443,10 @@ body.light-mode .social-icon {
                             <div class="flip-card-inner w-full h-full">
                                 <div class="flip-card-front bg-slate-800 rounded-lg p-4 flex flex-col items-center justify-center border border-slate-700">
                                     <i class="fas fa-users text-3xl text-blue-400 mb-2"></i>
-                                    <p class="text-center" data-key="skill_teamwork">Collaborative Teamwork</p>
+                                    <p class="text-center" data-key="skill_teamwork"></p>
                                 </div>
                                 <div class="flip-card-back bg-slate-700 rounded-lg p-4 flex items-center justify-center border border-purple-500">
-                                    <p class="text-sm text-center" data-key="skill_teamwork_desc">Effective collaborator with strong communication skills, fostering productive team environments.</p>
+                                    <p class="text-sm text-center" data-key="skill_teamwork_desc"></p>
                                 </div>
                             </div>
                         </div>
@@ -417,10 +454,10 @@ body.light-mode .social-icon {
                             <div class="flip-card-inner w-full h-full">
                                 <div class="flip-card-front bg-slate-800 rounded-lg p-4 flex flex-col items-center justify-center border border-slate-700">
                                     <i class="fas fa-brain text-3xl text-purple-400 mb-2"></i>
-                                    <p class="text-center" data-key="skill_self_learning">Continuous Learning</p>
+                                    <p class="text-center" data-key="skill_self_learning"></p>
                                 </div>
                                 <div class="flip-card-back bg-slate-700 rounded-lg p-4 flex items-center justify-center border border-blue-500">
-                                    <p class="text-sm text-center" data-key="skill_self_learning_desc">Proactive and self-motivated in acquiring new technologies and methodologies to stay at the forefront.</p>
+                                    <p class="text-sm text-center" data-key="skill_self_learning_desc"></p>
                                 </div>
                             </div>
                         </div>
@@ -428,24 +465,24 @@ body.light-mode .social-icon {
                             <div class="flip-card-inner w-full h-full">
                                 <div class="flip-card-front bg-slate-800 rounded-lg p-4 flex flex-col items-center justify-center border border-slate-700">
                                     <i class="fas fa-chart-line text-3xl text-green-400 mb-2"></i>
-                                    <p class="text-center" data-key="skill_analytical_skills">Analytical Acumen</p>
+                                    <p class="text-center" data-key="skill_analytical_skills"></p>
                                 </div>
                                 <div class="flip-card-back bg-slate-700 rounded-lg p-4 flex items-center justify-center border border-purple-500">
-                                    <p class="text-sm text-center" data-key="skill_analytical_skills_desc">Skilled in data and system analysis to inform robust technical decision-making and optimization.</p>
+                                    <p class="text-sm text-center" data-key="skill_analytical_skills_desc"></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <h3 class="text-xl font-semibold mt-8 mb-4 text-blue-400" data-key="about_international_projects_title">International Project Exposure</h3>
+                    <h3 class="text-xl font-semibold mt-8 mb-4 text-blue-400" data-key="about_international_projects_title"></h3>
                     <div class="bg-slate-800 p-4 rounded-lg">
-                        <p class="mb-3" data-key="about_international_projects_desc">He contribuido exitosamente en proyectos en diversos mercados internacionales, incluyendo:</p>
+                        <p class="mb-3" data-key="about_international_projects_desc"></p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm" data-key="country_united_states">United States</span>
-                            <span class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-sm" data-key="country_spain">Spain</span>
-                            <span class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-sm" data-key="country_colombia">Colombia</span>
-                            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-300 rounded-full text-sm" data-key="country_mexico">Mexico</span>
-                            <span class="px-3 py-1 bg-red-900/50 text-red-300 rounded-full text-sm" data-key="country_peru">Peru</span>
+                            <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm" data-key="country_united_states"></span>
+                            <span class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-sm" data-key="country_spain"></span>
+                            <span class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-sm" data-key="country_colombia"></span>
+                            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-300 rounded-full text-sm" data-key="country_mexico"></span>
+                            <span class="px-3 py-1 bg-red-900/50 text-red-300 rounded-full text-sm" data-key="country_peru"></span>
                         </div>
                     </div>
                 </div>
@@ -455,19 +492,19 @@ body.light-mode .social-icon {
 
     <section id="skills" class="py-20 px-6">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center" data-key="skills_title"><span class="gradient-text">Technical Skills</span></h2>
+            <h2 class="text-3xl font-bold mb-12 text-center" data-key="skills_title"></h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="space-y-8">
                     <div class="animate-fade-in-up bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition hover-grow" style="animation-delay: 0.1s">
                     <div class="flex items-center mb-4">
                         <i class="fab fa-php text-3xl text-purple-500 mr-3"></i>
-                        <h3 class="text-xl font-semibold" data-key="skills_php">PHP Development</h3>
+                        <h3 class="text-xl font-semibold" data-key="skills_php_oop"></h3>
                     </div>
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_php_oop">PHP, Object-Oriented Programming (OOP)</span>
+                                <span data-key="skills_php_oop"></span>
                                 <span>95%</span>
                             </div>
                             <div class="skill-bar">
@@ -476,7 +513,7 @@ body.light-mode .social-icon {
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_codeigniter_framework">CodeIgniter Framework</span>
+                                <span data-key="skills_codeigniter_framework"></span>
                                 <span>90%</span>
                             </div>
                             <div class="skill-bar">
@@ -485,7 +522,7 @@ body.light-mode .social-icon {
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_laravel_framework">Laravel Framework</span>
+                                <span data-key="skills_laravel_framework"></span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
@@ -494,7 +531,7 @@ body.light-mode .social-icon {
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_wordpress_cms">WordPress CMS</span>
+                                <span data-key="skills_wordpress_cms"></span>
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
@@ -507,12 +544,12 @@ body.light-mode .social-icon {
                     <div class="animate-fade-in-up bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition hover-grow" style="animation-delay: 0.2s">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-code text-3xl text-blue-400 mr-3"></i>
-                        <h3 class="text-xl font-semibold" data-key="skills_frontend_title">Frontend Development</h3>
+                        <h3 class="text-xl font-semibold" data-key="skills_frontend_title"></h3>
                     </div>
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_html_css_basics">HTML5/CSS3</span>
+                                <span data-key="skills_html_css_basics"></span>
                                 <span>90%</span>
                             </div>
                             <div class="skill-bar">
@@ -521,7 +558,7 @@ body.light-mode .social-icon {
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_javascript_basics">JavaScript ES6+</span>
+                                <span data-key="skills_javascript_basics"></span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
@@ -530,7 +567,7 @@ body.light-mode .social-icon {
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_jquery_library">jQuery Library</span>
+                                <span data-key="skills_jquery_library"></span>
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
@@ -539,7 +576,7 @@ body.light-mode .social-icon {
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_bootstrap_framework">Bootstrap Framework</span>
+                                <span data-key="skills_bootstrap_framework"></span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
@@ -555,12 +592,12 @@ body.light-mode .social-icon {
                     <div class="animate-fade-in-up bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition hover-grow" style="animation-delay: 0.3s">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-database text-3xl text-green-400 mr-3"></i>
-                        <h3 class="text-xl font-semibold" data-key="skills_database_apis_title">Database & API Integration</h3>
+                        <h3 class="text-xl font-semibold" data-key="skills_database_apis_title"></h3>
                     </div>
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_mysql_db">MySQL Database</span>
+                                <span data-key="skills_mysql_db"></span>
                                 <span>90%</span>
                             </div>
                             <div class="skill-bar">
@@ -569,7 +606,7 @@ body.light-mode .social-icon {
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_rest_apis">RESTful APIs</span>
+                                <span data-key="skills_rest_apis"></span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
@@ -578,7 +615,7 @@ body.light-mode .social-icon {
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_web_services">Web Services Integration</span>
+                                <span data-key="skills_web_services"></span>
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
@@ -587,7 +624,7 @@ body.light-mode .social-icon {
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_github_version_control">Git & GitHub Version Control</span>
+                                <span data-key="skills_github_version_control"></span>
                                 <span>75%</span>
                             </div>
                             <div class="skill-bar">
@@ -600,12 +637,12 @@ body.light-mode .social-icon {
                     <div class="animate-fade-in-up bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition hover-grow" style="animation-delay: 0.4s">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-tools text-3xl text-yellow-400 mr-3"></i>
-                        <h3 class="text-xl font-semibold" data-key="skills_additional_title">Complementary Skills</h3>
+                        <h3 class="text-xl font-semibold" data-key="skills_additional_title"></h3>
                     </div>
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_powerbi_tool">Power BI Data Visualization</span>
+                                <span data-key="skills_powerbi_tool"></span>
                                 <span>75%</span>
                             </div>
                             <div class="skill-bar">
@@ -614,7 +651,7 @@ body.light-mode .social-icon {
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_data_analysis">Data Analysis & Reporting</span>
+                                <span data-key="skills_data_analysis"></span>
                                 <span>70%</span>
                             </div>
                             <div class="skill-bar">
@@ -623,7 +660,7 @@ body.light-mode .social-icon {
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_seo">Search Engine Optimization (SEO)</span>
+                                <span data-key="skills_seo"></span>
                                 <span>65%</span>
                             </div>
                             <div class="skill-bar">
@@ -632,7 +669,7 @@ body.light-mode .social-icon {
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span data-key="skills_ui_ux">UI/UX Principles</span>
+                                <span data-key="skills_ui_ux"></span>
                                 <span>60%</span>
                             </div>
                             <div class="skill-bar">
@@ -647,7 +684,7 @@ body.light-mode .social-icon {
 
     <section id="projects" class="py-20 px-6 bg-slate-800/50">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center" data-key="projects_title"><span class="gradient-text">Featured Projects</span></h2>
+            <h2 class="text-3xl font-bold mb-12 text-center" data-key="projects_title"></h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="animate-fade-in-up project-card bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500 transition-all duration-300" style="animation-delay: 0.1s">
@@ -655,15 +692,15 @@ body.light-mode .social-icon {
                         <i class="fas fa-laptop-code text-6xl text-blue-400 opacity-70"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2" data-key="project_crm_system_title">Custom CRM Solution</h3>
-                        <p class="text-slate-400 mb-4" data-key="project_crm_system_desc">Developed a robust custom CRM system using PHP and CodeIgniter, streamlining client management and enhancing sales tracking for businesses.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-key="project_crm_system_title"></h3>
+                        <p class="text-slate-400 mb-4" data-key="project_crm_system_desc"></p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">E-invoicing</span>
+                            <span class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">PHP</span>
                             <span class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm">CodeIgniter</span>
                             <span class="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-sm">MySQL</span>
                         </div>
-                        <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center transition" data-key="view_details">
-                            View Project Details <i class="fas fa-arrow-right ml-2"></i>
+                        <a href="https://github.com/joungmac4/CRM_VENTAS" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center transition" data-key="view_details">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
@@ -673,15 +710,15 @@ body.light-mode .social-icon {
                         <i class="fas fa-shopping-cart text-6xl text-purple-400 opacity-70"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2" data-key="project_e_commerce_title">E-commerce Platform Development</h3>
-                        <p class="text-slate-400 mb-4" data-key="project_e_commerce_desc">Engineered a comprehensive online store, integrating secure payment gateways and efficient inventory management functionalities.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-key="project_e_commerce_title"></h3>
+                        <p class="text-slate-400 mb-4" data-key="project_e_commerce_desc"></p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">Laravel</span>
-                            <span class="px-3 py-1 bg-yellow-900/30 text-yellow-300 rounded-full text-sm">Mercado Pago</span>
+                            <span class="px-3 py-1 bg-yellow-900/30 text-yellow-300 rounded-full text-sm">JavaScript</span>
                             <span class="px-3 py-1 bg-red-900/30 text-red-300 rounded-full text-sm">Stripe API</span>
                         </div>
-                        <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center transition" data-key="view_details">
-                            View Project Details <i class="fas fa-arrow-right ml-2"></i>
+                        <a href="https://github.com/joungmac4/ecommerce-php" target="_blank" class="text-purple-400 hover:text-purple-300 flex items-center transition" data-key="view_details">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
@@ -691,15 +728,15 @@ body.light-mode .social-icon {
                         <i class="fas fa-chart-line text-6xl text-green-400 opacity-70"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2" data-key="project_business_analytics_title">Advanced Business Analytics Dashboard</h3>
-                        <p class="text-slate-400 mb-4" data-key="project_business_analytics_desc">Designed and implemented a data visualization platform delivering real-time metrics, insightful analytics, and custom reporting tools.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-key="project_business_analytics_title"></h3>
+                        <p class="text-slate-400 mb-4" data-key="project_business_analytics_desc"></p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-sm">CodeIgniter</span>
-                            <span class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">Zoho</span>
+                            <span class="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-sm">Power BI</span>
+                            <span class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">PHP</span>
                             <span class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm">REST API</span>
                         </div>
-                        <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center transition" data-key="view_details">
-                            View Project Details <i class="fas fa-arrow-right ml-2"></i>
+                        <a href="https://github.com/joungmac4/dashboard" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center transition" data-key="view_details">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
@@ -709,23 +746,23 @@ body.light-mode .social-icon {
                         <i class="fas fa-images text-6xl text-pink-400 opacity-70"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2" data-key="project_tourism_image_bank_title">Tourism Media Management System</h3>
-                        <p class="text-slate-400 mb-4" data-key="project_tourism_image_bank_desc">Built a specialized media management system for the Secretary of Tourism, featuring advanced search capabilities for efficient image organization and retrieval.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-key="project_tourism_image_bank_title"></h3>
+                        <p class="text-slate-400 mb-4" data-key="project_tourism_image_bank_desc"></p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm">CodeIgniter</span>
-                            <span class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">REST API</span>
-                            <span class="px-3 py-1 bg-gray-900/30 text-gray-300 rounded-full text-sm">Database</span>
+                            <span class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">CodeIgniter</span>
+                            <span class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm">RESTful API</span>
+                            <span class="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-sm">MySQL</span>
                         </div>
-                        <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center transition" data-key="view_details">
-                            View Project Details <i class="fas fa-arrow-right ml-2"></i>
+                        <a href="https://github.com/joungmac4/image-bank" target="_blank" class="text-purple-400 hover:text-purple-300 flex items-center transition" data-key="view_details">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="inline-flex items-center px-6 py-3 border border-slate-600 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition" data-key="view_all_projects">
-                    <i class="fab fa-github mr-2"></i> Explore All Projects on GitHub
+                <a href="https://github.com/joungmac4?tab=repositories" target="_blank" class="inline-flex items-center px-6 py-3 border border-slate-600 hover:bg-slate-800 hover:text-white rounded-lg font-medium transition" data-key="view_all_projects">
+                    <i class="fab fa-github mr-2"></i> 
                 </a>
             </div>
         </div>
@@ -733,84 +770,84 @@ body.light-mode .social-icon {
 
     <section id="experience" class="py-20 px-6 bg-slate-800/50">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center" data-key="experience_title"><span class="gradient-text">Professional Experience</span></h2>
+            <h2 class="text-3xl font-bold mb-12 text-center" data-key="experience_title"></h2>
             
             <div class="relative timeline pl-8 md:pl-16">
                 <div class="relative timeline-item mb-12">
                     <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-blue-500 shadow-lg">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-xl font-semibold" data-key="experience_current_job_title">Mid-Senior PHP Developer</h3>
-                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full" data-key="experience_current_job_duration">2024 - Present</span>
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                            <h3 class="text-xl font-semibold mb-1 sm:mb-0" data-key="experience_current_job_title"></h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full whitespace-nowrap">2024 - Present</span>
                         </div>
-                        <h4 class="text-blue-400 mb-3" data-key="experience_current_job_company">MITRA S.A. de C.V. - Full Time</h4>
+                        <h4 class="text-blue-400 mb-3" data-key="experience_current_job_company"></h4>
                         <ul class="list-disc pl-5 space-y-2 text-slate-300">
-                            <li data-key="experience_current_job_task1">Led maintenance and feature implementation for CRM Alphamitra, enhancing system functionality and user experience.</li>
-                            <li data-key="experience_current_job_task2">Developed and automated comprehensive reports, providing critical data insights for strategic decision-making.</li>
-                            <li data-key="experience_current_job_task3">Integrated various external services via robust APIs, ensuring seamless data flow and expanded system capabilities.</li>
-                            <li data-key="experience_current_job_task4">Conducted thorough documentation and data mapping, improving system transparency and maintainability.</li>
+                            <li data-key="experience_current_job_task1"></li>
+                            <li data-key="experience_current_job_task2"></li>
+                            <li data-key="experience_current_job_task3"></li>
+                            <li data-key="experience_current_job_task4"></li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="relative timeline-item mb-12">
                     <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-purple-500 shadow-lg">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-xl font-semibold" data-key="experience_part_time_job_title">Fullstack Developer</h3>
-                            <span class="text-sm bg-purple-100 text-purple-800 px-3 py-1 rounded-full" data-key="experience_part_time_job_duration">2023 - Present</span>
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                            <h3 class="text-xl font-semibold mb-1 sm:mb-0" data-key="experience_part_time_job_title"></h3>
+                            <span class="text-sm bg-purple-100 text-purple-800 px-3 py-1 rounded-full whitespace-nowrap">2023 - Present</span>
                         </div>
-                        <h4 class="text-purple-400 mb-3" data-key="experience_part_time_job_company">Atlantl México - Part Time</h4>
+                        <h4 class="text-purple-400 mb-3" data-key="experience_part_time_job_company"></h4>
                         <ul class="list-disc pl-5 space-y-2 text-slate-300">
-                            <li data-key="experience_part_time_job_task1">Developed and optimized custom extensions for Zoho, enhancing CRM functionality and efficiency.</li>
-                            <li data-key="experience_part_time_job_task2">Spearheaded e-commerce development projects, from concept to deployment, ensuring robust and scalable online retail solutions.</li>
-                            <li data-key="experience_part_time_job_task3">Managed comprehensive documentation and gathered precise requirements, ensuring project alignment with business objectives.</li>
+                            <li data-key="experience_part_time_job_task1"></li>
+                            <li data-key="experience_part_time_job_task2"></li>
+                            <li data-key="experience_part_time_job_task3"></li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="relative timeline-item mb-12">
                     <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-blue-500 shadow-lg">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-xl font-semibold" data-key="experience_behavior_digital_title">Fullstack Developer</h3>
-                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full" data-key="experience_behavior_digital_duration">2020 - Present</span>
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                            <h3 class="text-xl font-semibold mb-1 sm:mb-0" data-key="experience_behavior_digital_title"></h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full whitespace-nowrap">2020 - Present</span>
                         </div>
-                        <h4 class="text-blue-400 mb-3" data-key="experience_behavior_digital_company">Behavior Digital</h4>
+                        <h4 class="text-blue-400 mb-3" data-key="experience_behavior_digital_company"></h4>
                         <ul class="list-disc pl-5 space-y-2 text-slate-300">
-                            <li data-key="experience_behavior_digital_task1">Designed, developed, and maintained web applications and e-commerce platforms, ensuring high performance and user satisfaction.</li>
-                            <li data-key="experience_behavior_digital_task2">Managed and administered server environments, optimizing performance and ensuring system stability.</li>
-                            <li data-key="experience_behavior_digital_task3">Orchestrated and managed virtual events, including technical setup and platform support.</li>
-                            <li data-key="experience_behavior_digital_task4">Developed a specialized image bank for the Secretary of Tourism, facilitating efficient media asset management.</li>
+                            <li data-key="experience_behavior_digital_task1"></li>
+                            <li data-key="experience_behavior_digital_task2"></li>
+                            <li data-key="experience_behavior_digital_task3"></li>
+                            <li data-key="experience_behavior_digital_task4"></li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="relative timeline-item mb-12">
                     <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-purple-500 shadow-lg">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-xl font-semibold" data-key="experience_colibri_creativos_title">Frontend Developer</h3>
-                            <span class="text-sm bg-purple-100 text-purple-800 px-3 py-1 rounded-full" data-key="experience_colibri_creativos_duration">2018 - 2024</span>
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                            <h3 class="text-xl font-semibold mb-1 sm:mb-0" data-key="experience_colibri_creativos_title"></h3>
+                            <span class="text-sm bg-purple-100 text-purple-800 px-3 py-1 rounded-full whitespace-nowrap">2018 - 2024</span>
                         </div>
-                        <h4 class="text-purple-400 mb-3" data-key="experience_colibri_creativos_company">Colibrí Creativos</h4>
+                        <h4 class="text-purple-400 mb-3" data-key="experience_colibri_creativos_company"></h4>
                         <ul class="list-disc pl-5 space-y-2 text-slate-300">
-                            <li data-key="experience_colibri_creativos_task1">Led end-to-end web development projects, focusing on responsive design and intuitive user interfaces.</li>
-                            <li data-key="experience_colibri_creativos_task2">Implemented advanced SEO strategies and site optimization techniques to improve web presence and search rankings.</li>
-                            <li data-key="experience_colibri_creativos_task3">Developed and customized CRM and e-commerce solutions, enhancing client engagement and sales processes.</li>
-                            <li data-key="experience_colibri_creativos_task4">Performed comprehensive server administration, ensuring optimal website performance and security.</li>
+                            <li data-key="experience_colibri_creativos_task1"></li>
+                            <li data-key="experience_colibri_creativos_task2"></li>
+                            <li data-key="experience_colibri_creativos_task3"></li>
+                            <li data-key="experience_colibri_creativos_task4"></li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="relative timeline-item">
                     <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-blue-500 shadow-lg">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-xl font-semibold" data-key="experience_ed_camp_glifo_title">Backend Developer</h3>
-                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full" data-key="experience_ed_camp_glifo_duration">2016 - 2018</span>
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                            <h3 class="text-xl font-semibold mb-1 sm:mb-0" data-key="experience_ed_camp_glifo_title"></h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full whitespace-nowrap">2016 - 2018</span>
                         </div>
-                        <h4 class="text-blue-400 mb-3" data-key="experience_ed_camp_glifo_company">Glifo Media</h4>
+                        <h4 class="text-blue-400 mb-3" data-key="experience_ed_camp_glifo_company"></h4>
                         <ul class="list-disc pl-5 space-y-2 text-slate-300">
-                            <li data-key="experience_ed_camp_glifo_task1">Developed and maintained robust web applications, ensuring high reliability and efficient data processing.</li>
-                            <li data-key="experience_ed_camp_glifo_task2">Created and optimized REST APIs, facilitating seamless integration between systems and third-party services.</li>
-                            <li data-key="experience_ed_camp_glifo_task3">Designed and managed complex databases, ensuring data integrity, scalability, and performance.</li>
-                            <li data-key="experience_ed_camp_glifo_task4">Provided crucial maintenance and technical support, resolving issues promptly and ensuring continuous operation.</li>
+                            <li data-key="experience_ed_camp_glifo_task1"></li>
+                            <li data-key="experience_ed_camp_glifo_task2"></li>
+                            <li data-key="experience_ed_camp_glifo_task3"></li>
+                            <li data-key="experience_ed_camp_glifo_task4"></li>
                         </ul>
                     </div>
                 </div>
@@ -820,20 +857,20 @@ body.light-mode .social-icon {
 
     <section id="contact" class="py-20 px-6">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center" data-key="contact_title"><span class="gradient-text">Let's Connect</span></h2>
+            <h2 class="text-3xl font-bold mb-12 text-center" data-key="contact_title"></h2>
             
             <div class="flex flex-col md:flex-row gap-12">
                 <div class="md:w-1/2">
                     <div class="bg-slate-800 rounded-xl p-8 h-full">
-                        <h3 class="text-xl font-semibold mb-6 text-center" data-key="contact_info_title">Contact Information</h3>
+                        <h3 class="text-xl font-semibold mb-6 text-center" data-key="contact_info_title"></h3>
                         <div class="space-y-6">
                             <div class="flex items-center">
                                 <div class="w-12 h-12 rounded-full bg-blue-900/30 flex items-center justify-center mr-4">
                                     <i class="fas fa-envelope text-blue-400 contact-icon"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium" data-key="contact_email_section_title">Email Address</h4>
-                                    <p class="text-slate-400" data-key="contact_email_value">joungmac4@gmail.com</p>
+                                    <h4 class="font-medium" data-key="contact_email_section_title"></h4>
+                                    <p class="text-slate-400">joungmac4@gmail.com</p>
                                 </div>
                             </div>
                             
@@ -842,8 +879,8 @@ body.light-mode .social-icon {
                                     <i class="fas fa-globe text-purple-400 contact-icon"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium" data-key="contact_based_in_title">Location</h4>
-                                    <p class="text-slate-400" data-key="contact_based_in_value">Mexico</p>
+                                    <h4 class="font-medium" data-key="contact_based_in_title"></h4>
+                                    <p class="text-slate-400" data-key="country_mexico"></p>
                                 </div>
                             </div>
                             
@@ -852,22 +889,22 @@ body.light-mode .social-icon {
                                     <i class="fas fa-language text-green-400 contact-icon"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium" data-key="contact_languages_title">Languages</h4>
-                                    <p class="text-slate-400" data-key="contact_languages_text">Spanish (Native), English (Intermediate)</p>
+                                    <h4 class="font-medium" data-key="contact_languages_title"></h4>
+                                    <p class="text-slate-400" data-key="contact_languages_text"></p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="mt-10">
-                            <h4 class="font-medium mb-4 text-center" data-key="contact_connect_title">Connect with Me</h4>
+                            <h4 class="font-medium mb-4 text-center" data-key="contact_connect_title"></h4>
                             <div class="flex justify-center space-x-4">
-                                <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-blue-600 flex items-center justify-center transition">
+                                <a href="https://www.linkedin.com/in/marcomedinaortega/" target="_blank" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-blue-600 flex items-center justify-center transition">
                                     <i class="fab fa-linkedin-in text-white social-icon"></i>
                                 </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-blue-400 flex items-center justify-center transition">
+                                <a href="https://twitter.com/joungmac" target="_blank" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-blue-400 flex items-center justify-center transition">
                                     <i class="fab fa-twitter text-white social-icon"></i>
                                 </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-gray-800 flex items-center justify-center transition">
+                                <a href="https://github.com/joungmac4" target="_blank" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-gray-800 flex items-center justify-center transition">
                                     <i class="fab fa-github text-white social-icon"></i>
                                 </a>
                             </div>
@@ -877,29 +914,29 @@ body.light-mode .social-icon {
                 
                 <div class="md:w-1/2">
                     <div class="bg-slate-800 rounded-xl p-8 h-full">
-                        <h3 class="text-xl font-semibold mb-6 text-center" data-key="contact_send_message_title">Send Me a Message</h3>
+                        <h3 class="text-xl font-semibold mb-6 text-center" data-key="contact_send_message_title"></h3>
                         <form class="space-y-4">
                             <div>
-                                <label for="name" class="block mb-2 text-sm font-medium" data-key="contact_name_label">Your Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your name" data-key="contact_name_placeholder">
+                                <label for="name" class="block mb-2 text-sm font-medium" data-key="contact_name_label"></label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" data-key="contact_name_placeholder" placeholder="">
                             </div>
                             
                             <div>
-                                <label for="email" class="block mb-2 text-sm font-medium" data-key="contact_email_label">Your Email</label>
-                                <input type="email" id="email" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your email address" data-key="contact_email_placeholder">
+                                <label for="email" class="block mb-2 text-sm font-medium" data-key="contact_email_label"></label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" data-key="contact_email_placeholder" placeholder="">
                             </div>
                             
                             <div>
-                                <label for="subject" class="block mb-2 text-sm font-medium" data-key="contact_subject_label">Subject</label>
-                                <input type="text" id="subject" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Job Opportunity / Project Inquiry" data-key="contact_subject_placeholder">
+                                <label for="subject" class="block mb-2 text-sm font-medium" data-key="contact_subject_label"></label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" data-key="contact_subject_placeholder" placeholder="">
                             </div>
                             
                             <div>
-                                <label for="message" class="block mb-2 text-sm font-medium" data-key="contact_message_label">Message</label>
-                                <textarea id="message" rows="5" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Share your project details or message here..." data-key="contact_message_placeholder"></textarea>
+                                <label for="message" class="block mb-2 text-sm font-medium" data-key="contact_message_label"></label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" data-key="contact_message_placeholder" placeholder=""></textarea>
                             </div>
                             
-                            <button type="submit" class="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition" data-key="contact_send_button">Send Message</button>
+                            <button type="submit" class="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition" data-key="contact_send_button"></button>
                         </form>
                     </div>
                 </div>
@@ -909,20 +946,20 @@ body.light-mode .social-icon {
 
     <footer class="bg-slate-900 py-8 px-6 border-t border-slate-800">
         <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                 <div class="mb-4 md:mb-0">
-                    <a href="#" class="text-2xl font-bold gradient-text">Marco Ortega</a>
-                    <p class="text-slate-400 mt-2" data-key="hero_subtitle">Mid-Senior PHP Developer</p>
+                    <a href="#" class="text-2xl font-bold gradient-text block">Marco Ortega</a>
+                    <p class="text-slate-400 mt-2" data-key="footer_rights"></p>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="#about" class="text-slate-400 hover:text-white transition" data-key="menu_about">About Me</a>
-                    <a href="#skills" class="text-slate-400 hover:text-white transition" data-key="menu_skills">Technical Skills</a>
-                    <a href="#experience" class="text-slate-400 hover:text-white transition" data-key="menu_experience">Experience</a>
-                    <a href="#contact" class="text-slate-400 hover:text-white transition" data-key="menu_contact">Contact</a>
+                <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 mt-4 md:mt-0">
+                    <a href="#about" class="text-slate-400 hover:text-white transition whitespace-nowrap" data-key="menu_about"></a>
+                    <a href="#skills" class="text-slate-400 hover:text-white transition whitespace-nowrap" data-key="menu_skills"></a>
+                    <a href="#experience" class="text-slate-400 hover:text-white transition whitespace-nowrap" data-key="menu_experience"></a>
+                    <a href="#contact" class="text-slate-400 hover:text-white transition whitespace-nowrap" data-key="menu_contact"></a>
                 </div>
             </div>
             <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500">
-                <p data-key="footer_rights">&copy; 2023 Marco Antonio Medina Ortega. All rights reserved.</p>
+                <p data-key="footer_rights"></p>
             </div>
         </div>
     </footer>
@@ -1005,6 +1042,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     const key = el.getAttribute('data-key');
                     if (data[lang] && data[lang][key]) {
                         el.innerHTML = data[lang][key];
+                        // Special handling for placeholder text
+                        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                            el.placeholder = data[lang][key];
+                        }
                     }
                 });
             })
@@ -1020,8 +1061,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Initial load
-    setLanguageActiveButton(); // Set active button on page load
+    // Initial language load
+    setLanguageActiveButton();
     loadLanguage();
 
     // Intersection Observer for fade-in animations
@@ -1032,30 +1073,31 @@ document.addEventListener("DOMContentLoaded", function() {
                 animateObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    });
 
     document.querySelectorAll('.animate-fade-in-up').forEach(el => {
         animateObserver.observe(el);
     });
 
     // Theme toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-    const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+    const themeToggleDesktop = document.getElementById('theme-toggle'); // Desktop
+    const themeToggleMobileHeader = document.getElementById('mobile-theme-toggle-header'); // Mobile Header
+    
+    const themeIconDesktop = document.getElementById('theme-icon'); // Desktop
+    const themeIconMobileHeader = document.getElementById('mobile-theme-icon-header'); // Mobile Header
 
     function setTheme(theme) {
         if (theme === 'light') {
             document.body.classList.add('light-mode');
             document.body.classList.remove('dark-mode');
-            themeIcon.classList.replace('fa-moon', 'fa-sun');
-            mobileThemeIcon.classList.replace('fa-moon', 'fa-sun');
+            if (themeIconDesktop) themeIconDesktop.classList.replace('fa-moon', 'fa-sun');
+            if (themeIconMobileHeader) themeIconMobileHeader.classList.replace('fa-moon', 'fa-sun');
             localStorage.setItem('theme', 'light');
         } else {
             document.body.classList.add('dark-mode');
             document.body.classList.remove('light-mode');
-            themeIcon.classList.replace('fa-sun', 'fa-moon');
-            mobileThemeIcon.classList.replace('fa-sun', 'fa-moon');
+            if (themeIconDesktop) themeIconDesktop.classList.replace('fa-sun', 'fa-moon');
+            if (themeIconMobileHeader) themeIconMobileHeader.classList.replace('fa-sun', 'fa-moon');
             localStorage.setItem('theme', 'dark');
         }
     }
@@ -1071,12 +1113,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     setTheme(savedTheme);
 
-    themeToggle.addEventListener('click', toggleTheme);
-    mobileThemeToggle.addEventListener('click', toggleTheme);
-
+    if (themeToggleDesktop) themeToggleDesktop.addEventListener('click', toggleTheme);
+    if (themeToggleMobileHeader) themeToggleMobileHeader.addEventListener('click', toggleTheme); // Listener for the new mobile header button
 });
 </script>
-
 
 </body>
 </html>
